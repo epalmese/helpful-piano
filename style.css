@@ -1,0 +1,113 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+    background: rgb(220, 220, 220);
+    min-width: 300px;
+}
+.content {
+    background-image: radial-gradient(rgb(172, 172, 172) 20%, transparent 20%), radial-gradient(rgb(192, 192, 192) 20%, transparent 20%);
+    background-position: 0 0, 100px 100px;
+    background-size: 0.5em 0.5em;
+}
+.notice {
+    padding: 0.5em;
+    font-size: 0.8em;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.section {
+    padding: 1em;
+}
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 1em 0 0;
+}
+.highlight {
+    display: inline-block;
+    padding: 0.2em;
+    background: rgb(232, 232, 232);
+    border-radius: 0.2em;
+    vertical-align: middle;
+}
+#keys {
+    position: relative;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+}
+.key {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    box-sizing: border-box;
+    border-radius: 0px 0px 2px 2px;
+}
+.w {
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.b {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    border: 3px solid rgb(0, 0, 0);
+}
+.part {
+    background-color: rgb(115, 185, 255);
+}
+.tonic {
+    background: linear-gradient(0deg, rgb(55, 95, 145), rgb(115, 185, 255))
+}
+.lit {
+    background: rgb(240, 70, 70);
+}
+#sign {
+    display: inline-block;
+    background-color: rgb(172, 172, 172);
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+    border: 0.2em solid rgb(0, 0, 0);
+    vertical-align: -15%;
+}
+button {
+    border-color: rgb(192, 192, 192);
+    border-radius: 0.2em;
+}
+input[type=checkbox] {
+    vertical-align: middle;
+}
+input[type=range] {
+    vertical-align: middle;
+    height: 1em;
+    width: 6em;
+}
+.extra {
+    padding: 0.5em;
+    background: rgb(232, 232, 232);
+    border-radius: 0.2em;
+}
+.help {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 0.8em;
+}
+.footer {
+    font-size: 80%;
+    color: rgb(152, 152, 152);
+    text-align: center;
+}
+@media screen and (max-width: 500px) {
+    .highlight {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+}

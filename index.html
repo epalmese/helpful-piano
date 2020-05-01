@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Helpful Piano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Virtual piano with MIDI input, composition tools, and visual aids for learning musicians.">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="content">
+        <div class="section">
+            <span class="highlight name">Helpful Piano</span>
+            <span class="highlight">
+                <span id="sign"></span>
+                <span id="feedback2">0 MIDI input(s) detected.</span>
+            </span>
+        </div>
+        <div class="notice">
+            <span>To avoid unexpected noise, the page must be interacted with before it can produce audio:</span>
+            <button type="button" id="start">Enable Audio</button>
+            <span id="feedback1"></span>
+        </div>
+        <div class="section">
+            <div id="keys"></div>
+            <div class="highlight">
+                <input type="checkbox" id="enablescale" name="enablescale" unchecked>
+                <label for="enablescale">Scale hint:</label>
+                <select id="tonicselect" name="Keys" disabled>
+                    <option value="0">C</option>
+                    <option value="1">Db</option>
+                    <option value="2">D</option>
+                    <option value="3">Eb</option>
+                    <option value="4">E</option>
+                    <option value="5">F</option>
+                    <option value="6">Gb</option>
+                    <option value="7">G</option>
+                    <option value="8">Ab</option>
+                    <option value="9">A</option>
+                    <option value="10">Bb</option>
+                    <option value="11">B</option>
+                </select>
+                <select id="modeselect" name="Modes" disabled>
+                    <option value="0">Ionian</option>
+                    <option value="1">Dorian</option>
+                    <option value="2">Phrygian</option>
+                    <option value="3">Lydian</option>
+                    <option value="4">Mixolydian</option>
+                    <option value="5">Aeolian</option>
+                    <option value="6">Locrian</option>
+                    <option value="7">Melodic &#94; Minor</option>
+                    <option value="8">Harmonic Minor</option>
+                    <option value="9">Dominant Diminished</option>
+                </select>
+                <input type="checkbox" id="enablestrict" name="enablestrict" disabled>
+                <label for="enablestrict">Strict mode</label>
+            </div>
+            <div class="highlight">
+                <button type="button" id="mute">Silence (s)</button>
+                <label for="volume">Gain:</label>
+                <input type="range" min="0" max="100" value="100" id="volume">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="extra">
+            <div class="help">Guide:</div>
+            <b>What is this?</b>
+            <p>This is a browser-based virtual piano with MIDI input, visual scale/mode highlighting, and an option to lock notes outside the selected scale.</p>
+            <p>All sound is synthesized in your browser via the Web Audio API. Just JavaScript.</p>
+            <b>How do I use it?</b>
+            <ul>
+                <li>Click keys or plug in your MIDI device and play. The indicator will update if your device is detected.</li>
+                <li>Turn on <i>Scale hint</i> to see keys in the selected scale highlighted visually.</li>
+                <li>Turn on <i>Strict mode</i> to disable keys that are not included in the selected scale.</li>
+                <li>Press the <i>s</i> key or <i>silence</i> button to quiet all sound being produced by the synth.</li>
+                <li>Adjust <i>Gain</i> to lower the output volume. This will be useful if you are playing with sound from other browser tabs.</li>
+            </ul>
+            <b>What's next?</b>
+            <ul>
+                <li>Add composition tools, like numbered hotkeys for chords built on the degrees of a selected scale, for exploring progressions easily.</li>
+                <li>Write a good electric piano patch.</li>
+            </ul>
+            <b>What about ______?</b>
+            <p>I am always open to suggestions and if you find an error, you can tell me here:</p>
+            <p><a href="https://twitter.com/enricopalmese" target="_blank">&lt;insert contact information here&gt;</a></p>
+            <div class="footer">v0.1 &#169; 2020 Enrico Palmese</div>
+        </div>
+    </div>
+    <script src="MIDIscript.js"></script>
+</body>
+
+</html>
